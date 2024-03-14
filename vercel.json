@@ -1,0 +1,27 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      { "handle": "filesystem" },
+      {
+        "src": "/api/(.*)",
+        "dest": "index.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/"
+      }
+    ],
+    "env": {
+      "DB_HOST": "www.rig-dex.com",
+      "DB_USER": "rigdexco_hamza",
+      "DB_PASSWORD": "PMeJtmZUZpHCrZJNwJvZ",
+      "DB_NAME": "rigdexco_hamza"
+    }
+  }
+  
